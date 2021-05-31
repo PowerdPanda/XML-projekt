@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item id="universal">
+        <name>Universal Peace</name>
+        <price>45¥</price>
+        <origin>Liyue</origin>
+        <effect>Restores 34% Max HP</effect>
+    </item>
+    <item id="jade">
+        <name>Jade Parcels</name>
+        <price>55¥</price>
+        <origin>Liyue</origin>
+        <effect>Increase ATK and CRIT Rate</effect>
+    </item>
+    <item id="sticky">
+        <name>Sticky Honey Roast</name>
+        <price>40¥</price>
+        <origin>Mondstadt</origin>
+        <effect>Decrease stamina consumption</effect>
+    </item>
+    <item id="tinashu">
+        <name>Tinashu Meat</name>
+        <price>50¥</price>
+        <origin>Mondstadt</origin>
+        <effect>Increase Physical DMG</effect>
+    </item>
+    <item id="golden">
+        <name>Golden Crab</name>
+        <price>60¥</price>
+        <origin>Lyiue</origin>
+        <effect>Increase DEF</effect>
+    </item>
+    <item id="moon">
+        <name>Moon Pie</name>
+        <price>40¥</price>
+        <origin>Mondstadt</origin>
+        <effect>Increase Shield Stremght</effect>
+    </item>
+</menu>

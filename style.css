@@ -1,0 +1,97 @@
+body{
+  margin:0 auto;
+  background-color: #e8dcbf;
+  font-family: 'kanitregular';
+}
+
+@font-face {
+  font-family: 'kanitregular';
+  src: url('kanit-regular-webfont.woff2') format('woff2'),
+       url('kanit-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.wrapper{
+  max-width: 1000px;
+  margin:auto;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3e9f85;
+}
+
+li {
+  float: left;
+  text-align: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #24574b;
+}
+
+table,th,td {
+  text-align: center;
+  border : 1px solid black;
+  border-collapse: collapse;
+  margin:auto;
+}
+th,td {
+  padding: 5px;
+}
+
+.menuitem{
+  float:left;
+  width: 490px;
+  padding: 5px;
+}
+
+button, input{
+  margin: 10px;
+  background-color: #3e9f85;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

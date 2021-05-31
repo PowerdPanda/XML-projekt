@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GoodHunter</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="Slike/titleicon.png" type="image/icon type">
+    </head>
+    
+    <body>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="orders.html">Orders</a></li>
+        </ul>    
+        
+        <div class="wrapper">
+        <h1>Check your order before proceeding</h1>
+        <button type="button" onclick="loadXML()"><span>Check order</span></button>
+        <table id="demo"></table>
+        </div>
+
+
+        
+        <script>
+          function loadXML() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                MenuFunction(this);
+              }
+            };
+            xmlhttp.open("GET", "menuitems.xml", true);
+            xmlhttp.send();
+          }
+          function MenuFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table="<tr><th>Name</th><th>Price</th><th>Origin</th><th>Effect</th></tr>";
+            var x = xmlDoc.getElementsByTagName("item");
+            for (i = 0; i <x.length; i++) { 
+              table += "<tr><td>" +
+              x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("origin")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("effect")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = table;
+          }
+          </script> 
+    </body>
+
+</html>
